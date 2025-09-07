@@ -59,7 +59,7 @@ function Privacy() {
 
       <div style={styles.content}>
         <div style={styles.section}>
-          <h2 style={styles.sectionTitle}>Last Updated: September 7, 2024</h2>
+          <h2 style={styles.sectionTitle}>Last Updated: September 5, 2025</h2>
           <p>At Bhol, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our language learning platform.</p>
         </div>
 

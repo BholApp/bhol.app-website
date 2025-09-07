@@ -208,7 +208,7 @@ function Footer() {
       </div>
 
       <div style={styles.footerBottom}>
-        <p>&copy; 2024 Bhol. Learn Indic languages with confidence.</p>
+        <p>&copy; 2025 Bhol. Learn Indic languages with confidence.</p>
         <p style={{fontSize: '0.9rem', marginTop: '0.5rem'}}>
           Made with ❤️ for language learners worldwide
         </p>

@@ -59,7 +59,7 @@ function Terms() {
 
       <div style={styles.content}>
         <div style={styles.section}>
-          <h2 style={styles.sectionTitle}>Last Updated: September 7, 2024</h2>
+          <h2 style={styles.sectionTitle}>Last Updated: September 5, 2025</h2>
           <p>These Terms of Service ("Terms") govern your use of Bhol's language learning platform and services. By accessing or using our service, you agree to be bound by these Terms.</p>
         </div>
 

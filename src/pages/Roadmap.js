@@ -157,7 +157,7 @@ function Roadmap() {
     {
       phase: "Foundation",
       status: "completed",
-      date: "Q4 2024",
+      date: "Phase 1 - Completed",
       description: "Building the core infrastructure and assembling our world-class team of linguists, engineers, and educators.",
       features: [
         { title: "Core Team Assembly", desc: "Recruited experts in linguistics, AI, and education technology" },
@@ -168,7 +168,7 @@ function Roadmap() {
     {
       phase: "MVP Development",
       status: "current",
-      date: "Q1 2025",
+      date: "Phase 2 - In Progress",
       description: "Creating our minimum viable product with essential Hindi learning features and core AI personalization.",
       features: [
         { title: "Hindi Course Content", desc: "Complete beginner-to-intermediate Hindi curriculum" },
@@ -180,7 +180,7 @@ function Roadmap() {
     {
       phase: "Beta Launch",
       status: "upcoming",
-      date: "Q2 2025",
+      date: "Phase 3 - Next",
       description: "Limited public beta release with core features, gathering user feedback for full launch preparation.",
       features: [
         { title: "Public Beta Release", desc: "Invite-only beta program for early adopters" },
@@ -192,7 +192,7 @@ function Roadmap() {
     {
       phase: "Full Launch",
       status: "upcoming",
-      date: "Q3 2025",
+      date: "Phase 4 - Coming Soon",
       description: "Official worldwide launch with complete feature set, multiple languages, and premium offerings.",
       features: [
         { title: "Multi-Language Support", desc: "Bengali and Tamil courses launch" },
@@ -204,7 +204,7 @@ function Roadmap() {
     {
       phase: "Expansion",
       status: "upcoming",
-      date: "Q4 2025 & Beyond",
+      date: "Phase 5 - Future",
       description: "Continuous improvement, new languages, advanced features, and global expansion.",
       features: [
         { title: "Additional Languages", desc: "Sanskrit, Gujarati, Telugu, and more" },
