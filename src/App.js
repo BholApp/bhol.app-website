@@ -271,16 +271,9 @@ function AboutPage() {
           <h2 style={{fontSize: '2rem', color: '#333', marginBottom: '1rem'}}>Meet Our Founders</h2>
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '2rem'}}>
             <div style={{...styles.card, textAlign: 'left'}}>
-              <h3 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>Sarah Chen</h3>
-              <p style={{fontWeight: 'bold', color: '#666', marginBottom: '1rem'}}>Co-Founder & CEO</p>
-              <p>Sarah brings over 8 years of experience in edtech and language learning platforms. A former Google engineer
-              and Stanford CS graduate, she has helped scale learning platforms serving millions of users worldwide.</p>
-            </div>
-            <div style={{...styles.card, textAlign: 'left'}}>
-              <h3 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>Rajesh Kumar</h3>
-              <p style={{fontWeight: 'bold', color: '#666', marginBottom: '1rem'}}>Co-Founder & Head of Content</p>
-              <p>Rajesh is a native Hindi speaker and former language professor at Jawaharlal Nehru University.
-              His expertise in linguistics and cultural studies ensures our content is both academically rigorous and culturally authentic.</p>
+              <h3 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>Vaidun, Velji, Vinod</h3>
+              <p style={{fontWeight: 'bold', color: '#666', marginBottom: '1rem'}}>Co-Founders</p>
+              <p></p>
             </div>
           </div>
         </section>
