@@ -1,5 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Blog from './pages/Blog';
+import FAQ from './pages/FAQ';
+import Privacy from './pages/Privacy';
+import Roadmap from './pages/Roadmap';
+import Terms from './pages/Terms';
 
 // Inline styles
 const styles = {
@@ -96,9 +101,49 @@ const styles = {
   footer: {
     backgroundColor: '#333',
     color: 'white',
-    textAlign: 'center',
-    padding: '2rem',
+    padding: '3rem 1rem 2rem',
     marginTop: '4rem'
+  },
+  footerContent: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+    gap: '2rem',
+    marginBottom: '2rem'
+  },
+  footerSection: {
+    textAlign: 'left'
+  },
+  footerTitle: {
+    fontSize: '1.2rem',
+    fontWeight: 'bold',
+    marginBottom: '1rem',
+    color: '#FF6B35'
+  },
+  footerLink: {
+    color: 'white',
+    textDecoration: 'none',
+    display: 'block',
+    marginBottom: '0.5rem',
+    transition: 'opacity 0.2s'
+  },
+  socialLinks: {
+    display: 'flex',
+    gap: '1rem',
+    marginTop: '1rem'
+  },
+  socialIcon: {
+    color: 'white',
+    textDecoration: 'none',
+    fontSize: '1.5rem',
+    transition: 'opacity 0.2s'
+  },
+  footerBottom: {
+    borderTop: '1px solid #555',
+    paddingTop: '2rem',
+    textAlign: 'center',
+    color: '#ccc'
   }
 };
 
@@ -111,7 +156,12 @@ function Header() {
         <ul style={styles.navLinks}>
           <li><Link to="/" style={styles.navLink}>Home</Link></li>
           <li><Link to="/about" style={styles.navLink}>About</Link></li>
+          <li><Link to="/roadmap" style={styles.navLink}>Roadmap</Link></li>
+          <li><Link to="/blog" style={styles.navLink}>Blog</Link></li>
+          <li><Link to="/faq" style={styles.navLink}>FAQ</Link></li>
           <li><Link to="/careers" style={styles.navLink}>Careers</Link></li>
+          <li><Link to="/privacy" style={styles.navLink}>Privacy</Link></li>
+          <li><Link to="/terms" style={styles.navLink}>Terms</Link></li>
         </ul>
       </nav>
     </header>
@@ -121,7 +171,48 @@ function Header() {
 function Footer() {
   return (
     <footer style={styles.footer}>
-      <p>&copy; 2024 Bhol. Learn Indic languages with confidence.</p>
+      <div style={styles.footerContent}>
+        <div style={styles.footerSection}>
+          <h3 style={styles.footerTitle}>Bhol</h3>
+          <p>Learn Indic languages with AI-powered personalized education. Master Hindi, Bengali, Tamil, and more.</p>
+          <div style={styles.socialLinks}>
+            <a href="https://twitter.com/bholapp" style={styles.socialIcon} aria-label="Twitter">🐦</a>
+            <a href="https://linkedin.com/company/bhol" style={styles.socialIcon} aria-label="LinkedIn">💼</a>
+            <a href="https://facebook.com/bholapp" style={styles.socialIcon} aria-label="Facebook">📘</a>
+            <a href="https://instagram.com/bholapp" style={styles.socialIcon} aria-label="Instagram">📷</a>
+          </div>
+        </div>
+
+        <div style={styles.footerSection}>
+          <h4 style={styles.footerTitle}>Product</h4>
+          <Link to="/roadmap" style={styles.footerLink}>Roadmap</Link>
+          <Link to="/faq" style={styles.footerLink}>FAQ</Link>
+          <a href="#waitlist" style={styles.footerLink}>Join Waitlist</a>
+          <a href="mailto:hello@bhol.app" style={styles.footerLink}>Contact</a>
+        </div>
+
+        <div style={styles.footerSection}>
+          <h4 style={styles.footerTitle}>Company</h4>
+          <Link to="/about" style={styles.footerLink}>About</Link>
+          <Link to="/blog" style={styles.footerLink}>Blog</Link>
+          <Link to="/careers" style={styles.footerLink}>Careers</Link>
+          <a href="mailto:press@bhol.app" style={styles.footerLink}>Press</a>
+        </div>
+
+        <div style={styles.footerSection}>
+          <h4 style={styles.footerTitle}>Legal</h4>
+          <Link to="/privacy" style={styles.footerLink}>Privacy Policy</Link>
+          <Link to="/terms" style={styles.footerLink}>Terms of Service</Link>
+          <a href="mailto:legal@bhol.app" style={styles.footerLink}>Legal</a>
+        </div>
+      </div>
+
+      <div style={styles.footerBottom}>
+        <p>&copy; 2024 Bhol. Learn Indic languages with confidence.</p>
+        <p style={{fontSize: '0.9rem', marginTop: '0.5rem'}}>
+          Made with ❤️ for language learners worldwide
+        </p>
+      </div>
     </footer>
   );
 }
@@ -160,16 +251,114 @@ function AboutPage() {
         <h1 style={styles.heroTitle}>About Bhol</h1>
         <p style={styles.heroSubtitle}>Bridging cultures through language learning</p>
       </div>
-      
-      <div style={{maxWidth: '800px', margin: '0 auto', lineHeight: '1.6'}}>
-        <h2>Our Mission</h2>
-        <p>Bhol is dedicated to making Indic languages accessible to learners worldwide. We believe that language learning should be engaging, effective, and culturally rich.</p>
-        
-        <h2>Why Indic Languages?</h2>
-        <p>Indic languages are spoken by over 1.5 billion people worldwide. Learning these languages opens doors to rich cultures, diverse perspectives, and meaningful connections.</p>
-        
-        <h2>Our Approach</h2>
-        <p>We combine modern technology with traditional learning methods to create an immersive experience that respects the cultural context of each language.</p>
+
+      <div style={{maxWidth: '900px', margin: '0 auto', lineHeight: '1.6'}}>
+        <section style={{marginBottom: '3rem'}}>
+          <h2 style={{fontSize: '2rem', color: '#333', marginBottom: '1rem'}}>Our Story</h2>
+          <p style={{fontSize: '1.1rem', marginBottom: '1.5rem'}}>
+            Bhol was born from a simple observation: while the world becomes increasingly connected, language barriers continue to divide us.
+            Our founders, having experienced the challenges of learning Indic languages firsthand, recognized that traditional language learning
+            methods were not keeping pace with modern technology or the diverse needs of today's learners.
+          </p>
+          <p>
+            What started as a personal project to help friends and family learn Hindi has evolved into a mission to democratize
+            access to Indic language education. We believe that everyone should have the opportunity to connect with the rich
+            cultural heritage of India, Pakistan, Bangladesh, and Nepal through their languages.
+          </p>
+        </section>
+
+        <section style={{marginBottom: '3rem'}}>
+          <h2 style={{fontSize: '2rem', color: '#333', marginBottom: '1rem'}}>Meet Our Founders</h2>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '2rem'}}>
+            <div style={{...styles.card, textAlign: 'left'}}>
+              <h3 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>Sarah Chen</h3>
+              <p style={{fontWeight: 'bold', color: '#666', marginBottom: '1rem'}}>Co-Founder & CEO</p>
+              <p>Sarah brings over 8 years of experience in edtech and language learning platforms. A former Google engineer
+              and Stanford CS graduate, she has helped scale learning platforms serving millions of users worldwide.</p>
+            </div>
+            <div style={{...styles.card, textAlign: 'left'}}>
+              <h3 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>Rajesh Kumar</h3>
+              <p style={{fontWeight: 'bold', color: '#666', marginBottom: '1rem'}}>Co-Founder & Head of Content</p>
+              <p>Rajesh is a native Hindi speaker and former language professor at Jawaharlal Nehru University.
+              His expertise in linguistics and cultural studies ensures our content is both academically rigorous and culturally authentic.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style={{marginBottom: '3rem'}}>
+          <h2 style={{fontSize: '2rem', color: '#333', marginBottom: '1rem'}}>Our Mission</h2>
+          <p style={{fontSize: '1.1rem', marginBottom: '1.5rem'}}>
+            To make Indic languages accessible, engaging, and culturally rich for learners worldwide. We envision a world where
+            language barriers don't limit cultural exchange, business opportunities, or personal connections.
+          </p>
+          <div style={styles.grid}>
+            <div style={styles.card}>
+              <h3>🌍 Global Accessibility</h3>
+              <p>Break down barriers to Indic language education through innovative technology and affordable pricing.</p>
+            </div>
+            <div style={styles.card}>
+              <h3>🎯 Cultural Authenticity</h3>
+              <p>Preserve and promote the rich cultural context of each language through authentic content and native speakers.</p>
+            </div>
+            <div style={styles.card}>
+              <h3>🚀 Personalized Learning</h3>
+              <p>Leverage AI and data-driven insights to create personalized learning experiences for every student.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style={{marginBottom: '3rem'}}>
+          <h2 style={{fontSize: '2rem', color: '#333', marginBottom: '1rem'}}>Why Indic Languages Matter</h2>
+          <p style={{fontSize: '1.1rem', marginBottom: '1.5rem'}}>
+            Indic languages represent one of the world's largest and most diverse language families, spoken by over 1.5 billion people
+            across South Asia and the global diaspora. From the ancient wisdom of Sanskrit to the vibrant modern expressions of Hindi,
+            Bengali, and Tamil, these languages carry millennia of cultural, philosophical, and literary heritage.
+          </p>
+          <p>
+            In our increasingly interconnected world, learning Indic languages opens doors to:
+          </p>
+          <ul style={{marginLeft: '2rem', marginTop: '1rem'}}>
+            <li>Business opportunities in growing markets</li>
+            <li>Deeper cultural understanding and connections</li>
+            <li>Access to classical literature and philosophy</li>
+            <li>Enhanced travel and social experiences</li>
+            <li>Career advancement in global companies</li>
+          </ul>
+        </section>
+
+        <section style={{marginBottom: '3rem'}}>
+          <h2 style={{fontSize: '2rem', color: '#333', marginBottom: '1rem'}}>Our Approach</h2>
+          <p style={{fontSize: '1.1rem', marginBottom: '1.5rem'}}>
+            We combine cutting-edge technology with time-tested pedagogical methods to create an unparalleled learning experience.
+          </p>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem'}}>
+            <div style={{padding: '1.5rem', backgroundColor: '#f8f9fa', borderRadius: '8px'}}>
+              <h4 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>AI-Powered Learning</h4>
+              <p>Personalized lesson recommendations and intelligent review scheduling.</p>
+            </div>
+            <div style={{padding: '1.5rem', backgroundColor: '#f8f9fa', borderRadius: '8px'}}>
+              <h4 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>Cultural Immersion</h4>
+              <p>Contextual learning through stories, music, and cultural content.</p>
+            </div>
+            <div style={{padding: '1.5rem', backgroundColor: '#f8f9fa', borderRadius: '8px'}}>
+              <h4 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>Community Support</h4>
+              <p>Connect with fellow learners and native speakers for practice.</p>
+            </div>
+            <div style={{padding: '1.5rem', backgroundColor: '#f8f9fa', borderRadius: '8px'}}>
+              <h4 style={{color: '#FF6B35', marginBottom: '0.5rem'}}>Expert Validation</h4>
+              <p>Content reviewed by linguists and native speakers for accuracy.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style={{textAlign: 'center', padding: '3rem 0', backgroundColor: '#FFF5F2', borderRadius: '12px'}}>
+          <h2 style={{fontSize: '2rem', color: '#333', marginBottom: '1rem'}}>Join Our Mission</h2>
+          <p style={{fontSize: '1.1rem', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem'}}>
+            We're building more than just a language learning app – we're creating bridges between cultures.
+            Join us in our journey to make Indic languages accessible to everyone.
+          </p>
+          <Link to="/careers" style={styles.button}>View Career Opportunities</Link>
+        </section>
       </div>
     </div>
   );
@@ -225,6 +414,11 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/careers" element={<CareersPage />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </main>
         <Footer />
